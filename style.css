@@ -1,0 +1,126 @@
+.container {
+    margin: 0 auto;
+    border: 1px black solid;
+    width: 90%;
+    background-color: #00000090;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 3fr 10fr 50fr 6fr 7fr;
+    grid-template-areas:
+        "nav nav"
+        "saudacao saudacao"
+        "introducao introducao"
+        "apresentacao apresentacao"
+        "habilidades1 habilidades2"
+        "sobremim contato";
+}
+
+.item {
+    background-color: #00000045;
+    color: whitesmoke;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+        'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    list-style-type: none;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: #0b0818;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.itens a {
+    background-color: #281f59;
+    color: #c0b5ff;
+    border-radius: 50px;
+    margin: 4px;
+    padding: 8px;
+    font-size: 13px;
+}
+
+.itens a:hover {
+    text-decoration-style: wavy;
+    color: #525252;
+}
+
+.saudacao {
+    grid-area: saudacao;
+    font-size: 30px;
+    background-color: #110c24;
+}
+
+.introducao {
+    grid-area: introducao;
+    font-size: 20px;
+    background-color: #080612;
+    padding: 30px;
+}
+
+.introducao img {
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 50%;
+}
+
+.apresentacao {
+    grid-area: apresentacao;
+    background-color: #140f2b;
+}
+
+.apresentacao img {
+    max-width: 350px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+}
+
+.habilidades1 {
+    grid-area: habilidades1;
+    background-color: #32286b;
+    text-align: left;
+    font-size: 18px;
+    padding: 20px;
+}
+.habilidades2 {
+    grid-area: habilidades2;
+    background-color: #32286b;
+    text-align: left;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.sobremim {
+    grid-area: sobremim;
+    text-align: left;
+    background-color: #231a48;
+    font-size: 18px;
+    padding: 20px;
+}
+
+
+.contato {
+    grid-area: contato;
+    text-align: left;
+    background-color: #231a48;
+    font-size: 18px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+
+    /*usei a diretriz media screen para reatribuir características css para diferentes tamanhos de tela*/
+    .container {
+        width: 100%;
+    }
+}
